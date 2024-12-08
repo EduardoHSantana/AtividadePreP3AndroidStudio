@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/et_numbers"
+        android:layout_width="374dp"
+        android:layout_height="75dp"
+        android:layout_above="@+id/btn_validar"
+        android:hint="@string/numero_inteiro"
+        android:inputType="number|numberSigned"
+        android:importantForAutofill="no"
+        app:layout_constraintBottom_toTopOf="@+id/btn_validar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_numsInseridos"
+        app:layout_constraintVertical_bias="0.616" />
+
+    <Button
+        android:id="@+id/btn_validar"
+        android:layout_width="327dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btn_calcular"
+        android:layout_marginTop="372dp"
+        android:onClick="validarNumero"
+        android:text="@string/validar_numero"
+        android:textSize="17sp"
+        android:letterSpacing="0.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_reiniciar"
+        android:layout_width="327dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btn_calcular"
+        android:layout_marginTop="372dp"
+        android:onClick="validarNumero"
+        android:text="@string/inserir_outros_numeros"
+        android:textSize="17sp"
+        android:letterSpacing="0.1"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="329dp"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
+        android:enabled="false"
+        android:onClick="calcularMaiorEMenor"
+        android:text="@string/calcular_maior_e_menor"
+        android:textSize="17sp"
+        android:letterSpacing="0.1"
+        app:layout_constraintBottom_toTopOf="@+id/tv_result_menor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_validar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_numsInseridos"
+        android:layout_width="371dp"
+        android:layout_height="129dp"
+        android:layout_below="@+id/btn_calcular"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_result_menor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.354" />
+
+    <TextView
+        android:id="@+id/tv_result_menor"
+        android:layout_width="277dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tv_result_maior"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_result_maior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_message"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="187dp"
+        android:layout_below="@+id/et_numbers"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="35dp"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_result_maior"
+        android:layout_width="271dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/btn_calcular"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.677" />
+
+
+    <TextView
+        android:id="@+id/titleNumIns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.1"
+        android:text="@string/numInseridos"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tv_numsInseridos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

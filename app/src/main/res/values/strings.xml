@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ValidaMaiorEMenor</string>
+    <string name="numInseridos">Números Inseridos</string>
+    <string name="insira_vinte_n_meros_inteiros">Insira vinte números inteiros:</string>
+    <string name="validar">Validar</string>
+    <string name="menor_n_mero">Menor número:</string>
+    <string name="maior_n_mero">Maior número:</string>
+    <string name="calcular">Calcular</string>
+    <string name="numero_inteiro">Insira um número inteiro positivo</string>
+    <string name="alertlimite">Você já inseriu 20 números.</string>
+    <string name="alertnumValido">Insira um número inteiro válido.</string>
+    <string name="maior">Maior valor: %1$d</string>
+    <string name="menor">Menor Valor: %1$d</string>
+    <string name="inserir_outros_numeros">Inserir outros números</string>
+    <string name="calcular_maior_e_menor">"Calcular Maior e Menor"</string>
+    <string name="validar_numero">"Validar Número"</string>
+</resources>
